@@ -1,11 +1,20 @@
-# Système de Gestion des Absences pour le BUT informatique
-L’objectif est de concevoir et développer un système permettant de gérer, contrôler et analyser
-les absences des étudiants dans le programme BUT Informatique de l’IUT UPHF. 
+# SAE 4.01 - Déploiement et sécurisation d'une application web
 
-Ce système devra permettre aux étudiants de soumettre des justificatifs en cas d’absence et aux
-responsables pédagogiques de les examiner, les approuver ou les rejeter avec traçabilité. 
+## Présentation du projet
+Ce dépôt contient le code source, l'infrastructure et la documentation de notre projet de semestre 4 (SAE 4.01 - Parcours B) réalisé à l'IUT de Maubeuge. 
 
-De plus, le système doit alerter les responsables en cas d’absences répétées et en cas d’absences
-justifiés dans des jours d’évaluations, et fournir des statistiques détaillées.
+L'objectif est de déployer et sécuriser une application web de gestion d'assiduité. L'outil relie quatre profils d'utilisateurs (Étudiant, Secrétariat, Professeur, Responsable Pédagogique) pour automatiser le suivi des absences, l'importation de l'historique et la gestion des justificatifs.
 
-<br>Équipe : LEWANDOWSKI--BRY Enzo | PLICHON Antoine | BAILLON Arthus | BURGNIES Axel | HOSTELART-DJAOU Lucas
+## Architecture et Sécurité
+Conformément aux attendus du parcours B, le projet se concentre sur l'infrastructure et la cybersécurité :
+* **Infrastructure :** Virtualisation des services et sécurisation des accès réseau.
+* **Audit de sécurité :** Réalisation d'un test d'intrusion documenté selon le référentiel OWASP WSTG.
+* **Correctifs :** Déploiement de correctifs pour pallier les vulnérabilités identifiées, validés par un contre-audit.
+
+## Méthodologie
+Le développement a été mené en méthode Agile (sprints de deux semaines). Une attention particulière a été accordée à la gestion de projet sous Trello, au versioning, ainsi qu'à l'ergonomie des interfaces (critères de Bastien & Scapin).
+
+## Équipe (Groupe FA-B)
+* BAILLON Arthus
+* LEWANDOWSKI-BRY Enzo
+* USUPOVI Temur
