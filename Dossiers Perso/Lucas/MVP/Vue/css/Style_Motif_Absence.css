@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- HEADER ----- */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-section img {
+    height: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.bouton {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.bouton:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+}
+/* ----- FIN FOOTER ----- */
+
+
+
+
+
+
+
+
+/* ----- CONTENU PRINCIPAL ----- */
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* ----- WRAPPER BOUTON RETOUR ----- */
+.bouton-retour-wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* ----- STYLE ACTION-BUTTON ----- */
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.action-button:hover {
+    background-color: #aaa;
+}
+
+.content {
+    background-color: #fefefe;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+}
+
+.content-body {
+    display: flex;
+    gap: 30px;
+}
+
+.form-section {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.content-value,
+.download-link {
+    background-color: #e9ecef;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.download-link {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+}
+
+.comment-box {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.comment-box p {
+    margin: 0;
+    font-style: italic;
+    color: #666;
+}
+

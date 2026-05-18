@@ -1,0 +1,22 @@
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    /* ✅ empêche les retours à la ligne */
+    white-space: nowrap;
+    /* ✅ laisse le bouton s’adapter à la taille du texte */
+    width: auto;
+    min-width: fit-content;
+
+}
+.action-button:hover {
+    background-color: #aaa;
+}

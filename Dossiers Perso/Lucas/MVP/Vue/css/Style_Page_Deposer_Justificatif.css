@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* === HEADER === */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-section img {
+    height: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.button {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+    margin-top: auto;
+}
+/* ----- FIN FOOTER ----- */
+
+
+
+
+
+
+
+
+
+/* === CONTENEUR PRINCIPAL === */
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bouton-retour-wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.action-button:hover {
+    background-color: #aaa;
+}
+
+/* Style appliqué à la balise <form> */
+#deposerJustificatif {
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 30px;
+    background-color: #fefefe;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.form-body {
+    display: flex;
+    gap: 30px;
+    min-width: 0;
+    align-items: flex-start;
+}
+
+.form-section {
+    flex: 1;
+    min-width: 250px;
+    min-width: 0;
+}
+
+.form-section h4 {
+    border-bottom: 2px solid #004d66;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+
+#commentaire {
+    resize: vertical;
+    min-width: 0;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+}
+
+.file-label:hover {
+    background-color: #aaa;
+}
+
+.form-group small {
+    font-size: 0.8rem;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+.button-footer {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.form-group .error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    min-height: 1em;
+}
+
+.form-input.invalid {
+    border-color: #dc3545;
+}
+
+.error-message-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.succes-message-box {
+    background-color: #adff93;
+    color: #3a721c;
+    border: 1px solid #adff93;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#file-upload-feedback {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #004d66;
+}

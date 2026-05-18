@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- HEADER ----- */
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-section img {
+    height: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.bouton-deconnexion {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-deconnexion:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+
+
+/* ----- FOOTER ----- */
+
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+}
+/* ----- FIN FOOTER ----- */
+
+
+
+
+
+
+
+
+
+/* ----- CONTENU CENTRAL ----- */
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Styles pour les champs du formulaire */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: #aaa;
+}
+
+
+.error-message {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fdd;
+    color: #a00;
+    border: 1px solid #f00;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ddf;
+    color: #006;
+    border: 1px solid #00f;
+    border-radius: 5px;
+}

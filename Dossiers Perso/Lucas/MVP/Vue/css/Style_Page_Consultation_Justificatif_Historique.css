@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ----- HEADER ----- */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+.logo-section img {
+    height: 60px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+.bouton-deconnexion, .bouton-statistique {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-deconnexion:hover, .bouton-statistique:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+    margin-top: auto; /* Pousse le footer en bas */
+}
+/* ----- FIN FOOTER ----- */
+
+
+
+
+
+
+
+
+
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Bouton Retour aligné à gauche */
+.bouton-retour-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+}
+
+/* Variables pour les couleurs */
+:root {
+    --couleur-primaire-bleu: #004d9c;
+    --couleur-secondaire-gris: #555;
+    --couleur-fond-bouton-gris: #ccc;
+    --couleur-fond-entete-tableau: #808080;
+    --couleur-texte-sombre: #333;
+    --spacing-unit: 15px;
+}
+
+/* Style général des boutons d'action */
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+}
+.action-button:hover {
+    background-color: #aaa;
+}
+
+/* Conteneur pour centrer le bloc de consultation */
+.consultation-bloc-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.consultation-contenu {
+    max-width: 800px;
+    width: 95%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.consultation-corps {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.details-left, .details-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.details-left { padding-right: calc(var(--spacing-unit) * 1.5); }
+.details-right { padding-left: calc(var(--spacing-unit) * 1.5); }
+
+.details-left > *, .details-right > * {
+    margin-top: 0;
+    margin-bottom: var(--spacing-unit);
+}
+
+.details-left > *:last-child, .details-right > *:last-child {
+    margin-bottom: 0;
+}
+
+
+.details-left p.absence-date {
+    margin-bottom: calc(var(--spacing-unit) / 3);
+    font-size: 1em;/
+}
+
+.details-left p.absence-date + p.absence-date {
+    margin-bottom: var(--spacing-unit);
+}
+
+.student-info-label {
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    font-size: 1em;
+}
+
+
+
+/* Titres H3 (Justificatif, Finalité) */
+.detail-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: calc(var(--spacing-unit) * 0.5);
+    margin-bottom: calc(var(--spacing-unit) * 0.7);
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Étiquettes des commentaires */
+.comment-label {
+    margin-bottom: calc(var(--spacing-unit) / 3);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.comment-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 0.95em;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    margin-bottom: var(--spacing-unit);
+    min-height: 0;
+    height: 150px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.comment-box p {
+    margin: 0;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+/* Séparateur vertical */
+.separator-line {
+    width: 1px;
+    background-color: #ccc;
+    align-self: stretch;
+}
+
+/* Boutons de téléchargement */
+.justificatif-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: var(--spacing-unit);
+}
+.justificatif-buttons .action-button {
+    padding: 10px 15px;
+}
+
+.justificatif-buttons p {
+    margin: 0;
+    font-style: italic;
+    color: #777;
+}
+
+.finalite-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: var(--spacing-unit);
+}
+/* Styles pour les classes de statut */
+.finalite-label .status-accepted { color: #28a745; }
+.finalite-label .status-refused { color: #dc3545; }
+.finalite-label .status-pending { color: #ffc107; }
+
+
+/* Styles pour les statuts */
+.status-nojustified {color : #004d9c; font-weight: bold;}
+.status-pending { color: #ffc107; font-weight: bold; }
+.status-accepted { color: #28a745; font-weight: bold; }
+.status-refused { color: #dc3545; font-weight: bold; }
+

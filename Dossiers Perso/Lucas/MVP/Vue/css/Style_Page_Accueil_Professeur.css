@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* === HEADER === */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-section img {
+    height: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.bouton-deconnexion {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-deconnexion:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+    margin-top: auto;
+}
+/* ----- FIN FOOTER ----- */
+
+
+
+
+
+
+
+
+
+/* === CONTENEUR PRINCIPAL === */
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Variables pour les couleurs */
+:root {
+    --couleur-primaire-bleu: #004d9c;
+    --couleur-secondaire-gris: #555;
+    --couleur-fond-bouton-gris: #ccc;
+    --couleur-fond-entete-tableau: #808080;
+    --couleur-bande-orange: #ff8c00;
+    --couleur-texte-sombre: #333;
+}
+
+/* Titre principal */
+.titre-principal {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--couleur-texte-sombre);
+    margin: 0 0 40px 0;
+    text-align: center;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Wrapper pour la boîte blanche du tableau */
+.tableau-wrapper {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Conteneur pour le tableau */
+.table-container {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Styles généraux du tableau */
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+/* Style de l'en-tête du tableau */
+.tableau thead th {
+    background-color: var(--couleur-fond-entete-tableau);
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-right: 1px solid white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.tableau thead th:last-child {
+    border-right: none;
+}
+
+/* Style des cellules du corps du tableau */
+.tableau tbody td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95em;
+    word-wrap: break-word;
+    background-color: #fff;
+}
+
+/* Style des lignes paires */
+.tableau tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Message si un tableau est vide */
+.empty-table-message td {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+    background-color: #fdfdfd;
+}

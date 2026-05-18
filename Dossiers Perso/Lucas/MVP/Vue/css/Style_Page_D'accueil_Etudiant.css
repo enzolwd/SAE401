@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Variables pour les couleurs */
+:root {
+    --couleur-primaire-bleu: #004d9c;
+    --couleur-secondaire-gris: #555;
+    --couleur-fond-bouton-gris: #ccc;
+    --couleur-fond-entete-tableau: #808080;
+    --couleur-bande-orange: #ff8c00;
+    --couleur-texte-sombre: #333;
+}
+
+/* === HEADER === */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-section img {
+    height: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.button {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00334d;
+}
+
+/* === FOOTER === */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+/* === CONTENEUR PRINCIPAL === */
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--couleur-texte-sombre);
+    margin: 0 0 40px 0;
+    text-align: center;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    align-items: stretch;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.table-container {
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* === TABLEAU DES ABSENCES === */
+.absence-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.absence-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.absence-table th {
+    background-color: var(--couleur-fond-entete-tableau);
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-right: 1px solid white;
+    border-bottom: 1px solid #666;
+}
+
+.absence-table th:last-child {
+    border-right: none;
+}
+
+.absence-table td {
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    font-size: 0.95em;
+    word-wrap: break-word;
+    background-color: #fff;
+}
+
+.absence-table tbody tr:nth-child(even) td {
+    background-color: #f8f9fa;
+}
+
+.status-nojustified {color : #004d9c; font-weight: bold;}
+.status-pending { color: #ffc107; font-weight: bold; }
+.status-accepted { color: #28a745; font-weight: bold; }
+.status-refused { color: #dc3545; font-weight: bold; }
+.status-revision { color: #5c00ca; font-weight: bold; }
+
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.action-button:hover { background-color: #aaa; }
+
+/* Style pour le conteneur du bouton */
+.justify-button {
+    text-align: right;
+}
+
+
+
+
+
+
+
+/* Espacement entre les deux boîtes blanches */
+.dashboard-content.daily-view {
+    margin-bottom: 30px;
+}
+
+/* On donne aussi une classe au bloc historique pour être spécifique */
+.dashboard-content.history-view h1 {
+    font-size: 1.8em;
+}
+
+/* Styles pour les titres H2 des sections */
+.dashboard-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--couleur-secondaire-gris);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Formulaire de filtre par date */
+.date-filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.date-filter-form label {
+    font-weight: bold;
+    color: var(--couleur-texte-sombre);
+}
+
+.date-filter-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 0.95em;
+    background-color: #fff;
+}
+
+/* On s'assure que le bouton du formulaire a la bonne taille */
+.date-filter-form .action-button {
+    padding: 9px 15px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+/* Message si un tableau est vide */
+.empty-table-message td {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+    background-color: #fdfdfd;
+}

@@ -1,0 +1,303 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* centrer le contenue de la page */
+* {
+    box-sizing: border-box;
+}
+
+/* ----- HEADER ----- */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+.logo-section img {
+    height: 60px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+.bouton-deconnexion {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-statistique {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-deconnexion:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+}
+/* ----- FIN FOOTER ----- */
+
+
+/* Style pour le conteneur principal de la page */
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bouton-retour-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+}
+
+
+/* Variables pour les couleurs */
+:root {
+    --couleur-primaire-bleu: #004d9c;
+    --couleur-secondaire-gris: #555;
+    --couleur-fond-bouton-gris: #ccc;
+    --couleur-fond-entete-tableau: #808080;
+    --couleur-bande-orange: #ff8c00;
+    --couleur-texte-sombre: #333;
+}
+
+.titre-tableau-de-bord {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--couleur-texte-sombre);
+    margin: 0 0 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+}
+/* Conteneur principal des deux tableaux */
+.content-wrapper,
+.content-tables-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 60px;
+    width: 90%;
+    margin: 40px auto;
+}
+.section-justificatifs,
+.section-historique {
+    flex: 1;
+    max-width: 600px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.section-justificatifs h2,
+.section-historique h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: var(--couleur-texte-sombre);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+/* En-têtes (gris foncé) */
+.tableau thead th {
+    background-color: var(--couleur-fond-entete-tableau);
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-right: 1px solid white;
+}
+.tableau thead th:last-child {
+    border-right: none;
+}
+/* Corps du tableau */
+.tableau tbody td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+.tableau tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* Colonnes spécifiques au tableau Historique */
+.tableau.historique tbody td:nth-child(3) {
+    font-weight: bold;
+}
+/* Classes de statut basées sur les TR */
+.statut-refuse td:nth-child(3) {
+    color: red;
+}
+.statut-accepte td:nth-child(3) {
+    color: green;
+}
+
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+    text-decoration: none;
+}
+.action-button:hover {
+    background-color: #aaa;
+}
+
+
+
+
+.consultation-modal .modal-content {
+    max-width: 800px;
+    width: 95%;
+    min-height: 500px;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.refusal-modal .modal-content {
+    max-width: 500px;
+    width: 90%;
+    min-height: 400px;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+
+
+
+.revision-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.revision-comment-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+
+    max-width: 500px;
+    min-height: 250px;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.revision-comment-content .revision-instruction {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.revision-comment-content .text-content {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--couleur-texte-sombre);
+    margin: 15px 0 10px 0;
+    text-align: left;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.revision-comment-content .revision-textarea {
+    min-height: 120px;
+    padding: 10px;
+    border: 1px solid var(--couleur-secondaire-gris);
+    border-radius: 0;
+    width: 100%;
+    font-size: 1em;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.revision-comment-content .revision-buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.error-message-box {
+    background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;
+    padding: 15px; border-radius: 5px; margin: 0 0 20px 0;
+    text-align: center; width: 100%;
+}
+

@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ----- HEADER ----- */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+.logo-section img {
+    height: 60px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+.bouton-deconnexion {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-statistique {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-deconnexion:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+    margin-top: auto;
+}
+/* ----- FIN FOOTER ----- */
+
+
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titre-principal {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 30px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Section du tableau (gauche) */
+.tableau-wrapper {
+    width: 100%;
+}
+
+/* Sidebar (droite) */
+.sidebar-section {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.table-container {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.tableau thead th {
+    background-color: #808080;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-right: 1px solid white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tableau thead th:last-child {
+    border-right: none;
+}
+
+.tableau tbody td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.tableau tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.empty-table-message td {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+    background-color: #fdfdfd;
+}
+
+.action-button-stat-etu {
+    display: inline-block;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-family: inherit;
+    text-align: center;
+
+    font-size: 0.9rem;
+    white-space: normal;
+    line-height: 1.4;
+    width: 100%;
+}
+
+.action-button-stat-etu:hover {
+    background-color: #aaa;
+}
+
+
+/* Boîte de statistiques */
+.stats-box {
+    background-color: #e6f0f5;
+    border: 2px solid #c9d8e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stats-box h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stats-box select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.stats-box .stats-result {
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.message-erreur {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}

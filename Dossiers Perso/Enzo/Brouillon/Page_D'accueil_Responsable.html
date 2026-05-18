@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de bord - Responsable</title>
+    <link rel="stylesheet" href="Style_Page_D'accueil_Responsable.css">
+</head>
+
+
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header-main">
+    <div class="logo-section">
+        <img src="logo_uphf.png" alt="Logo Université Polytechnique">
+    </div>
+
+    <div class="header-right">
+        <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>
+        <a href="index.html" class="bouton-statistique">Statistique</a>
+        <a href="Page_De_Connexion.php" class="bouton-deconnexion">Déconnexion</a>
+    </div>
+</div>
+
+<!-- ===== CONTENU DE LA PAGE ===== -->
+<div class="container">
+    <div class="dashboard-content-wrapper">
+
+        <h1 class="titre-tableau-de-bord">Tableau De Bord</h1>
+
+        <div class="content-tables-container">
+
+            <!-- SECTION : Justificatifs en attente -->
+            <section class="section-justificatifs">
+                <h2>Justificatifs en attente</h2>
+
+                <div class="table-container">
+                    <table class="tableau">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Étudiant</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Enzo LeGrand</td>
+                            <td><button class="action-button consulterAttente">Consulter</button></td>
+                        </tr>
+                        <tr>
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Arthus Baillon</td>
+                            <td><button class="action-button consulterAttente">Consulter</button></td>
+                        </tr>
+                        <tr>
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Léon Marchand</td>
+                            <td><button class="action-button consulterAttente">Consulter</button></td>
+                        </tr>
+                        <tr>
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Zinedine Zidane</td>
+                            <td><button class="action-button consulterAttente">Consulter</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECTION : Historique -->
+            <section class="section-historique">
+                <h2>Historique</h2>
+
+                <div class="table-container">
+                    <table class="tableau historique">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Étudiant</th>
+                            <th>Statut</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="statut-refuse">
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Enzo LeGrand</td>
+                            <td>Refusé</td>
+                            <td><button class="action-button consulterHistorique">Consulter</button></td>
+                            <td><button class="action-button deverrouiller">Déverrouiller</button></td>
+                        </tr>
+                        <tr class="statut-accepte">
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Arthus Baillon</td>
+                            <td>Accepté</td>
+                            <td><button class="action-button consulterHistorique">Consulter</button></td>
+                            <td><button class="action-button deverrouiller">Déverrouiller</button></td>
+                        </tr>
+                        <tr class="statut-refuse">
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Léon Marche</td>
+                            <td>Refusé</td>
+                            <td><button class="action-button consulterHistorique">Consulter</button></td>
+                            <td><button class="action-button deverrouiller">Déverrouiller</button></td>
+                        </tr>
+                        <tr class="statut-accepte">
+                            <td>Du 06/05/2025 à 10h au 06/05/2025 à 15h</td>
+                            <td>Zinedine Zidane</td>
+                            <td>Accepté</td>
+                            <td><button class="action-button consulterHistorique">Consulter</button></td>
+                            <td><button class="action-button deverrouiller">Déverrouiller</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div> <!-- fin .content-tables-container -->
+    </div> <!-- fin .dashboard-content-wrapper -->
+</div> <!-- fin .container -->
+
+<!-- ===== FOOTER ===== -->
+<footer class="main-footer"></footer>
+
+
+
+
+
+
+
+
+
+<!-- ===== MODALE CONSULTATION DE JUSTIFICATIF EN ATTENTE ===== -->
+<div id="modal-consultation-attente" class="modal consultation-modal">
+    <div class="modal-content consultation-content">
+
+        <span class="close-button" id="close-consultation-attente-modal">&times;</span>
+
+        <div class="modal-body-details">
+            <div class="details-left">
+                <p class="absence-date">Absent du : <strong>12/04/2025 à 10h</strong></p>
+                <p class="absence-date">Au : <strong>12/04/2025 à 15h</strong></p>
+
+                <h3 class="detail-title">Motif : Pas de transport</h3>
+
+                <h3 class="detail-title">Commentaire :</h3>
+                <div class="comment-box">
+                    <p>
+                        Lorem ipsum dolor sit amet. Sit repellat aliquam et iure vitae est quasi illum aut
+                        aspernatur repellendus nam omnis dolor ut iste omnis. Ea odio nulla qui voluptas
+                        accusantium est beatae distinctio! Ea fuga quia 33 voluptatem nostrum ex rerum
+                        necessitatibus et velit magnam eos exercitationem fugiat sed voluptatem nisi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="separator-line"></div>
+
+            <div class="details-right">
+                <h3 class="detail-title">Justificatif :</h3>
+                <div class="justificatif-buttons">
+                    <button class="action-button">Télécharger le justificatif</button>
+                    <button class="action-button apercu-button">Voir un aperçu</button>
+                </div>
+
+                <p class="student-info-label">Nom : <strong>Lewandowski --Bry</strong></p>
+                <p class="student-info-label">Prénom : <strong>Enzo</strong></p>
+                <p class="student-info-label">Adresse mail : <strong>Enzo.Lewan@uphf.fr</strong></p>
+
+                <div class="action-trio-buttons">
+                    <button class="action-button revision-button">Demander une révision</button>
+                    <button class="action-button refuser-button">Refuser</button>
+                    <button class="action-button valider-button">Valider</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== MODALE CONSULTATION DE JUSTIFICATIF DANS L HISTORIQUE ===== -->
+<div id="modal-consultation" class="modal consultation-modal">
+    <div class="modal-content consultation-content">
+
+        <span class="close-button" id="close-consultation-modal">&times;</span>
+
+        <div class="modal-body-details">
+            <div class="details-left">
+                <p class="absence-date">Absent du : <strong>12/04/2025 à 10h</strong></p>
+                <p class="absence-date">Au : <strong>12/04/2025 à 15h</strong></p>
+
+                <h3 class="detail-title">Motif : Pas de transport</h3>
+
+                <h3 class="detail-title">Commentaire :</h3>
+                <div class="comment-box">
+                    <p>
+                        Lorem ipsum dolor sit amet. Sit repellat aliquam et iure vitae est quasi illum aut
+                        aspernatur repellendus nam omnis dolor ut iste omnis. Ea odio nulla qui voluptas
+                        accusantium est beatae distinctio! Ea fuga quia 33 voluptatem nostrum ex rerum
+                        necessitatibus et velit magnam eos exercitationem fugiat sed voluptatem nisi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="separator-line"></div>
+
+            <div class="details-right">
+                <h3 class="detail-title">Justificatif :</h3>
+                <div class="justificatif-buttons">
+                    <button class="action-button">Télécharger le justificatif</button>
+                    <button class="action-button">Voir un aperçu</button>
+                </div>
+
+                <p class="student-info-label">Nom : <strong>Lewandowski --Bry</strong></p>
+                <p class="student-info-label">Prénom : <strong>Enzo</strong></p>
+                <p class="student-info-label">Adresse mail : <strong>Enzo.Lewan@uphf.fr</strong></p>
+
+                <h3 class="finalite-label">Finalité : <span class="finalite-status">Refusé</span></h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ===== MODALE DE CONFIRMATION DE DEVEROUILLAGE ===== -->
+<div id="modal-deverrouiller" class="modal">
+    <div class="modal-content">
+        <h3>Confirmation</h3>
+        <p>Voulez-vous vraiment déverrouiller ce justificatif ? L'étudiant pourra de nouveau modifier le justificatif.</p>
+        <div class="modal-buttons">
+            <button id="confirm-deverrouiller" class="action-button">Confirmer</button>
+            <button id="cancel-deverrouiller" class="action-button">Annuler</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ===== MODALE DE REFUS D UN JUSTIFICATIF ===== -->
+<div id="modal-refus" class="modal refusal-modal">
+    <div class="modal-content refusal-content">
+
+        <span class="close-button" id="close-refus-modal">&times;</span>
+
+        <h3 class="modal-title">Motif de Refus du Justificatif</h3>
+
+        <div class="refusal-body">
+
+            <label for="motif-refus" class="refusal-label detail-title">Motif :</label>
+            <select id="motif-refus" class="refusal-select">
+                <option value="" disabled selected>Choisir un motif de refus</option>
+                <option value="justificatif-invalide">Justificatif invalide (illisible, non conforme)</option>
+                <option value="motif-non-recevable">Motif d'absence non recevable</option>
+                <option value="dates-incoherentes">Dates ou heures incohérentes avec l'absence</option>
+                <option value="justificatif-manquant">Pièce justificative manquante</option>
+                <option value="autre">Autre motif (à préciser dans le commentaire)</option>
+            </select>
+
+            <label for="commentaire-refus" class="refusal-label detail-title">Commentaire pour l'étudiant :</label>
+            <textarea id="commentaire-refus" class="refusal-textarea" placeholder="Expliquez la raison du refus... (facultatif)"></textarea>
+
+            <div class="refusal-buttons-trio">
+                <button id="create-motif-btn" class="action-button">Créer un motif</button>
+                <button id="validate-refus-btn" class="action-button">Valider</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== MODALE D AJOUT DE MOTIF POUR LE REFUS ===== -->
+<div id="modal-ajouter-motif" class="modal add-motif-modal">
+    <div class="modal-content add-motif-content">
+
+        <span class="close-button" id="close-add-motif-modal">&times;</span>
+
+        <h3 class="modal-title-small">Motif</h3>
+
+        <div class="add-motif-body">
+            <input type="text" id="new-motif-input" class="add-motif-input" placeholder="Écrivez un motif...">
+
+            <div class="add-motif-buttons">
+                <button id="validate-new-motif-btn" class="action-button">Valider</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- ===== MODALE DE VALIDATION DU JUSTIFICATIF ===== -->
+<div id="modal-validation-comment" class="modal validation-comment-modal">
+    <div class="modal-content validation-comment-content">
+
+        <span class="close-button" id="close-validation-comment-modal">&times;</span>
+
+        <div class="validation-comment-body">
+            <p class="validation-instruction">
+                Vous pouvez ajouter un commentaire.
+            </p>
+
+            <h3 class="modal-title-validation">Commentaire :</h3>
+
+            <textarea id="validation-comment-textarea" class="revision-textarea"
+                      placeholder="Écrivez quelque chose... (Facultatif)"></textarea>
+
+            <div class="validation-buttons-wrapper">
+                <button id="confirm-validation-comment-btn" class="action-button">Valider</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ===== MODALE DE DEMANDE DE REVISION ===== -->
+<div id="modal-demande-revision" class="modal revision-comment-modal">
+    <div class="modal-content revision-comment-content">
+
+        <span class="close-button" id="close-revision-modal">&times;</span>
+
+        <form id="form-revision-comment">
+            <div class="revision-comment-body">
+                <p class="revision-instruction">
+                    Pour demander une révision du justificatif vous devez saisir un commentaire. Ce commentaire sera visible par l'étudiant.
+                </p>
+
+                <h3 class="modal-title-revision">Commentaire :</h3>
+
+                <textarea id="revision-comment-textarea" class="revision-textarea"
+                          placeholder="Indiquez ce que l'étudiant doit modifier/ajouter..."
+                          required></textarea>
+
+                <div class="revision-buttons-wrapper">
+                    <button type="submit" id="confirm-revision-comment-btn" class="action-button deverrouiller-style">
+                        Valider
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== SCRIPT JS ===== -->
+<script>
+    // =========================================================
+    // GESTION MODALE DÉVERROUILLAGE
+    // =========================================================
+    const modal = document.getElementById('modal-deverrouiller');
+    const confirmBtn = document.getElementById('confirm-deverrouiller');
+    const cancelBtn = document.getElementById('cancel-deverrouiller');
+
+    // Ouvre la modale quand on clique sur un bouton "Déverrouiller"
+    document.querySelectorAll('.deverrouiller').forEach(button => {
+        button.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Ferme la modale si on clique sur "Annuler"
+    cancelBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Ferme la modale et affiche un message de confirmation
+    confirmBtn.addEventListener('click', () => {
+        alert("Le justificatif a bien été déverrouillé ✅");
+        modal.style.display = 'none';
+    });
+
+
+    // =========================================================
+    // GESTION MODALE CONSULTATION HISTORIQUE
+    // =========================================================
+    const consultationModal = document.getElementById('modal-consultation');
+    const closeConsultationBtn = document.getElementById('close-consultation-modal');
+
+    // Ouvre la modale quand on clique sur un bouton "ConsulterHistorique"
+    document.querySelectorAll('.consultation-button, .action-button.consulterHistorique').forEach(button => {
+        button.addEventListener('click', () => {
+            consultationModal.style.display = 'flex';
+        });
+    });
+
+    // Ferme la modale en cliquant sur le 'X'
+    closeConsultationBtn.addEventListener('click', () => {
+        consultationModal.style.display = 'none';
+    });
+
+
+    // =========================================================
+    // GESTION MODALE CONSULTATION EN ATTENTE
+    // =========================================================
+    const consultationAttenteModal = document.getElementById('modal-consultation-attente');
+    const closeConsultationAttenteBtn = document.getElementById('close-consultation-attente-modal');
+    // Récupération du bouton Valider dans la modale en attente
+    const validateButtonConsultation = document.querySelector('.action-trio-buttons .valider-button');
+
+    // Ouvre la modale quand on clique sur les boutons "Consulter" de la section "En attente"
+    document.querySelectorAll('.action-button.consulterAttente').forEach(button => {
+        button.addEventListener('click', () => {
+            consultationAttenteModal.style.display = 'flex';
+        });
+    });
+
+    // Ferme la modale en cliquant sur le 'X'
+    closeConsultationAttenteBtn.addEventListener('click', () => {
+        consultationAttenteModal.style.display = 'none';
+    });
+
+    // GESTION DU BOUTON VALIDER (DANS MODALE CONSULTATION EN ATTENTE)
+    // Au clic, ouvre la modale de confirmation/commentaire de validation
+    if (validateButtonConsultation) {
+        validateButtonConsultation.addEventListener('click', () => {
+            validationCommentModal.style.display = 'flex'; // Ouvre la modale de validation/commentaire
+            validationCommentTextarea.value = ''; // Réinitialiser le champ pour la validation
+        });
+    }
+    // =========================================================
+
+
+    // =========================================================
+    // GESTION MODALE DEMANDE DE RÉVISION
+    // =========================================================
+    const revisionCommentModal = document.getElementById('modal-demande-revision');
+    const revisionButton = document.querySelector('.action-trio-buttons .revision-button');
+    const closeRevisionModalBtn = document.getElementById('close-revision-modal');
+    const revisionCommentForm = document.getElementById('form-revision-comment');
+    const revisionCommentTextarea = document.getElementById('revision-comment-textarea');
+
+    // Ouvre la modale quand on clique sur le bouton "Demander une révision"
+    if (revisionButton) {
+        revisionButton.addEventListener('click', () => {
+            // Ouvre la nouvelle modale de révision
+            revisionCommentModal.style.display = 'flex';
+            revisionCommentTextarea.value = ''; // Réinitialise le champ
+        });
+    }
+
+    // Ferme la modale en cliquant sur le 'X'
+    if (closeRevisionModalBtn) {
+        closeRevisionModalBtn.addEventListener('click', () => {
+            revisionCommentModal.style.display = 'none';
+        });
+    }
+
+    // Gère la soumission du formulaire (vérification du champ obligatoire)
+    if (revisionCommentForm) {
+        revisionCommentForm.addEventListener('submit', (e) => {
+            // Le 'required' HTML gère déjà une partie de la validation,
+            // mais on peut ajouter une couche de JS pour un meilleur contrôle.
+            if (revisionCommentTextarea.value.trim() === '') {
+                // Si le champ est vide, le 'required' HTML le gère par défaut.
+                return;
+            }
+
+            e.preventDefault(); // Empêche la soumission réelle du formulaire
+
+            // Logique de validation/soumission
+            alert(`Demande de révision envoyée. Commentaire : "${revisionCommentTextarea.value.trim()}"`);
+
+            revisionCommentModal.style.display = 'none';
+            consultationAttenteModal.style.display = 'none';
+        });
+    }
+    // =========================================================
+
+
+    // =========================================================
+    // GESTION MODALE REFUS
+    // =========================================================
+    const refusModal = document.getElementById('modal-refus');
+    const closeRefusBtn = document.getElementById('close-refus-modal');
+    const refuserButtons = document.querySelectorAll('.action-button.refuser-button');
+    const validateRefusBtn = document.getElementById('validate-refus-btn');
+
+    // Ouvre la modale de refus quand on clique sur le bouton "Refuser"
+    refuserButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            refusModal.style.display = 'flex';
+            // Ferme la modale parent (consultation en attente)
+        });
+    });
+
+    // Ferme la modale de refus en cliquant sur le 'X'
+    closeRefusBtn.addEventListener('click', () => {
+        refusModal.style.display = 'none';
+    });
+
+    // Gère l'action "Valider" du refus
+    validateRefusBtn.addEventListener('click', () => {
+        const selectedMotif = document.getElementById('motif-refus').value;
+        const commentaire = document.getElementById('commentaire-refus').value;
+
+        if (!selectedMotif) {
+            alert("Veuillez choisir un motif de refus.");
+            return;
+        }
+
+        alert(`Refusé avec le motif : ${selectedMotif} et le commentaire: "${commentaire}"`);
+        refusModal.style.display = 'none';
+        consultationAttenteModal.style.display = 'none';
+    });
+
+
+    // =========================================================
+    // GESTION MODALE AJOUTER UN MOTIF POUR LE REFUS
+    // =========================================================
+    const addMotifModal = document.getElementById('modal-ajouter-motif');
+    const createMotifBtn = document.getElementById('create-motif-btn');
+    const closeAddMotifBtn = document.getElementById('close-add-motif-modal');
+    const validateNewMotifBtn = document.getElementById('validate-new-motif-btn');
+    const newMotifInput = document.getElementById('new-motif-input');
+
+    // Ouvre la modale "Ajouter un motif"
+    createMotifBtn.addEventListener('click', () => {
+        // Ouvre la modale d'ajout
+        addMotifModal.style.display = 'flex';
+        newMotifInput.value = ''; // Réinitialiser le champ
+    });
+
+    // Ferme la modale en cliquant sur le 'X'
+    closeAddMotifBtn.addEventListener('click', () => {
+        addMotifModal.style.display = 'none';
+    });
+
+    // Gère l'action "Valider" pour l'ajout de motif
+    validateNewMotifBtn.addEventListener('click', () => {
+        const nouveauMotif = newMotifInput.value.trim();
+
+        if (nouveauMotif === "") {
+            alert("Veuillez écrire un motif.");
+            return;
+        }
+
+        // SIMULATION : Ajout du nouveau motif à la liste déroulante de la modale de refus
+        const motifSelect = document.getElementById('motif-refus');
+        const newOption = document.createElement('option');
+        const optionValue = nouveauMotif.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+        newOption.value = optionValue;
+        newOption.textContent = nouveauMotif;
+        newOption.selected = true; // Sélectionne le nouveau motif
+
+        motifSelect.appendChild(newOption);
+
+        alert(`Le motif "${nouveauMotif}" a été ajouté et sélectionné ✅`);
+        addMotifModal.style.display = 'none';
+        refusModal.style.display = 'flex'; // Rouvre la modale de refus
+    });
+
+
+    // =========================================================
+    // GESTION MODALE DE VALIDATION DU JUSTIFICATIF
+    // =========================================================
+    const validationCommentModal = document.getElementById('modal-validation-comment');
+    const closeValidationCommentBtn = document.getElementById('close-validation-comment-modal');
+    const confirmValidationCommentBtn = document.getElementById('confirm-validation-comment-btn');
+    const validationCommentTextarea = document.getElementById('validation-comment-textarea');
+
+    // Ferme la modale en cliquant sur le 'X'
+    closeValidationCommentBtn.addEventListener('click', () => {
+        validationCommentModal.style.display = 'none';
+
+    });
+
+    // Gère l'action "Valider" (confirmation finale)
+    confirmValidationCommentBtn.addEventListener('click', () => {
+        const commentaireValidation = validationCommentTextarea.value.trim();
+
+        // Logique de validation finale
+        alert(`Justificatif Accepté. Commentaire de validation : "${commentaireValidation}"`);
+        validationCommentModal.style.display = 'none';
+        consultationAttenteModal.style.display = 'none';
+    });
+
+
+    // =========================================================
+    // GESTION GLOBALE : FERMETURE DES MODALES AU CLIC EN DEHORS
+    // =========================================================
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+        if (e.target === consultationModal) {
+            consultationModal.style.display = 'none';
+        }
+        if (e.target === consultationAttenteModal) {
+            consultationAttenteModal.style.display = 'none';
+        }
+        if (e.target === refusModal) {
+            refusModal.style.display = 'none';
+        }
+        if (e.target === addMotifModal) {
+            addMotifModal.style.display = 'none';
+        }
+        // AJOUT DE LA NOUVELLE MODALE
+        if (e.target === revisionCommentModal) {
+            revisionCommentModal.style.display = 'none';
+        }
+        if (e.target === validationCommentModal) {
+            validationCommentModal.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

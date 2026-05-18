@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Université Polytechnique</title>
+    <link rel="stylesheet" href="Style_Page_D'accueil_Etudiant.css">
+</head>
+<body>
+<div class="header-main">
+    <div class="logo-section">
+        <img src="logo_uphf.png" alt="Logo Université Polytechnique">
+    </div>
+    <div class="header-right">
+        <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>
+        <a href="index.html" class="disconnect-button">Déconnexion</a>
+    </div>
+</div>
+<div class="container">
+    <h1>Historique des absences</h1>
+    <div class="dashboard-content">
+        <div class="table-container">
+            <table class="absence-table history">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Statut</th>
+                    <th>Évaluation</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-pending">En attente</td>
+                    <td>non</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-accepted">Acceptée</td>
+                    <td>oui</td>
+                    <td><a href="Motif_Absence.html" class="action-button">Voir le motif</a></td>
+                </tr>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-refused">Refusée</td>
+                    <td>non</td>
+                    <td><a href="Motif_Absence.html" class="action-button">Voir le motif</a></td>
+                </tr>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-refused">Refusée</td>
+                    <td>non</td>
+                    <td><a href="Motif_Absence.html" class="action-button">Voir le motif</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="justify-button">
+                <button id="deposit-justify-btn" class="action-button">Déposer un justificatif</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="main-footer"></footer>
+
+
+<div id="justify-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Justification d'une absence</h3>
+            <span class="close-button">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="form-section">
+                <h4>Absence</h4>
+                <div class="form-group">
+                    <label for="date-start">Absent du</label>
+                    <input type="date" id="date-start" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="time-start">À :</label>
+                    <input type="time" id="time-start" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="date-end">Au</label>
+                    <input type="date" id="date-end" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="time-end">À :</label>
+                    <input type="time" id="time-end" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="motif">Motif</label>
+                    <select id="motif" class="form-input" required>
+                        <option value="">Choisissez le motif</option>
+                        <option value="maladie">Maladie</option>
+                        <option value="rendez-vous">Rendez-vous</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="commentaire">Commentaire</label>
+                    <textarea id="commentaire" class="form-input" placeholder="Écrivez un commentaire... (facultatif)"></textarea>
+                </div>
+            </div>
+            <div class="form-section">
+                <h4>Renseignements/Documents</h4>
+                <div class="form-group">
+                    <label for="justificatif" class="file-label">Importer un fichier</label>
+                    <input type="file" id="justificatif" class="file-input">
+                    <span class="error-message"></span>
+                    <small>Fichier justificatif (pdf, png, jpeg, jpg)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse mail</label>
+                    <input type="email" id="email" class="form-input" placeholder="Entrez votre adresse mail..." required>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+        </div>
+        <div class="button-footer">
+            <button id="submit-justify-btn" class="action-button">Envoyer</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const justifyModal = document.getElementById('justify-modal');
+    const depositJustifyBtn = document.getElementById('deposit-justify-btn');
+    const closeModalBtn = justifyModal.querySelector('.close-button');
+    const submitJustifyBtn = document.getElementById('submit-justify-btn');
+
+    depositJustifyBtn.addEventListener('click', () => {
+        justifyModal.style.display = 'flex';
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        justifyModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === justifyModal) {
+            justifyModal.style.display = 'none';
+        }
+    });
+
+    submitJustifyBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const requiredFields = document.querySelectorAll('#justify-modal [required]');
+        let formIsValid = true;
+
+        requiredFields.forEach(field => {
+            const errorSpan = field.nextElementSibling;
+            if (!field.value) {
+                field.classList.add('invalid');
+                errorSpan.textContent = "Ce champ est obligatoire";
+                formIsValid = false;
+            } else {
+                field.classList.remove('invalid');
+                errorSpan.textContent = "";
+            }
+        });
+
+        if (formIsValid) {
+            alert('Formulaire envoyé avec succès !');
+            justifyModal.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

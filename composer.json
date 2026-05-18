@@ -1,0 +1,9 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^7.0",
+        "league/oauth2-google": "^4.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}

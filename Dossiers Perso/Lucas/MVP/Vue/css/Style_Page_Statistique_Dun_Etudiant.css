@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fond gris clair de votre fichier */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ----- HEADER ----- */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+.logo-section img {
+    height: 60px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+.bouton-deconnexion {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-statistique {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-deconnexion:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+    margin-top: auto;
+}
+/* ----- FIN FOOTER ----- */
+
+
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur flex pour les 2 boîtes */
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Style de la boîte grise */
+.chart-box {
+    width: 48%;
+    min-width: 450px;
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chart-box-courbe {
+    width: 98%;
+    min-width: 450px;
+    margin-top: 30px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Titre à l'intérieur de la boîte */
+.chart-box h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Conteneur pour les options radio */
+.chart-options {
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+/* Style des labels radio */
+.radio-custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    color: #555;
+}
+
+/* Masquer le bouton radio */
+.radio-custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Créer le cercle extérieur */
+.radio-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #fff;
+    border: 2px solid #888;
+    border-radius: 50%;
+}
+
+.radio-custom:hover input ~ .radio-check {
+    background-color: #ccc;
+}
+
+.radio-check:after {
+    content: "X";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Afficher le "X" quand le bouton est coché */
+.radio-custom input:checked ~ .radio-check:after {
+    display: block;
+}
+
+.chart-canvas-container {
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+
+.radio-custom.small {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.radio-custom.small .radio-check {
+    height: 18px;
+    width: 18px;
+}
+.radio-custom.small .radio-check:after {
+    font-size: 12px;
+}

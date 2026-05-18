@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* === HEADER === */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-section img {
+    height: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.bouton-deconnexion {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-deconnexion:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+    margin-top: auto;
+}
+/* ----- FIN FOOTER ----- */
+
+
+
+
+
+
+
+
+
+/* === CONTENEUR PRINCIPAL === */
+.container {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Titre principal */
+.titre-principal {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 40px 0;
+    text-align: center;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* boîte blanche du tableau */
+.tableau-wrapper {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 100%;
+}
+
+/* Conteneur pour le tableau */
+.table-container {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.tableau thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* styles du tableau */
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+/* Style de l'entête du tableau */
+.tableau thead th {
+    background-color: #808080;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-right: 1px solid white;
+    top: 0;
+    z-index: 1;
+}
+
+.tableau thead th:last-child {
+    border-right: none;
+}
+
+/* Style des cases du tableau */
+.tableau tbody td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95em;
+    word-wrap: break-word;
+    background-color: #fff;
+}
+
+/* style des lignes paires */
+.tableau tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* message si un tableau est vide */
+.empty-table-message td {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+    background-color: #fdfdfd;
+}
+
+
+
+
+/* Rattrapage accepté */
+.tableau tbody td.status-oui {
+    background-color: #4CAF50 ;
+    color: white ;
+    font-weight: bold ;
+    text-align: center;
+}
+
+/* Rattrapage refusé */
+.tableau tbody td.status-non {
+    background-color: #F44336 ;
+    color: white ;
+    font-weight: bold ;
+    text-align: center;
+}
+
+
+.tableau tbody td.status-oui {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tableau tbody td.status-non {
+    background-color: #F44336 !important;
+    color: white !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.tableau thead th {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.tableau thead th:hover {
+    background-color: #666;
+}
+
+
+
+
+.filtres-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.filtres-container input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filtres-container input:focus {
+    outline: none;
+    border-color: #004d9c;
+    box-shadow: 0 0 5px rgba(0, 77, 156, 0.3);
+}
+
+
+

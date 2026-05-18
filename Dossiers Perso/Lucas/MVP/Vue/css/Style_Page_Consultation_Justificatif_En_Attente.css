@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ----- HEADER ----- */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+.logo-section img {
+    height: 60px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right p {
+    margin-right: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+.bouton-deconnexion,
+.bouton-statistique {
+    background-color: #004d66;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+.bouton-deconnexion:hover,
+.bouton-statistique:hover {
+    background-color: #00334d;
+}
+/* ----- FIN HEADER ----- */
+
+
+/* ----- FOOTER ----- */
+.main-footer {
+    height: 100px;
+    background-color: #004d66;
+}
+/* ----- FIN FOOTER ----- */
+
+
+
+
+/* ----- CONTENEUR PRINCIPAL ----- */
+.container {
+    flex: 1;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* ----- BLOC DE CONSULTATION (CONTENEUR BLANC) ----- */
+.consultation-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border: 1px solid #ddd;
+}
+
+
+.consultation-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.details-left,
+.details-right {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Ligne de séparation verticale */
+.separator-line {
+    width: 1px;
+    background-color: #e0e0e0;
+}
+
+/* ----- STYLES DU TEXTE ET DES INFOS ----- */
+.detail-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.detail-title:first-child {
+    margin-top: 0;
+}
+
+.absence-date,
+.student-info-label {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+.student-info-label strong,
+.absence-date strong {
+    color: #000;
+}
+
+.comment-box {
+    background-color: #f9f9f9;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    padding: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+
+/* Style générique pour tous les boutons de la page (sauf header) */
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: auto;
+    min-width: fit-content;
+    text-decoration: none;
+}
+.action-button:hover {
+    background-color: #aaa;
+}
+
+
+/* Groupe de boutons (Télécharger, Aperçu) */
+.justificatif-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Groupe de boutons (Trio final) */
+.action-trio-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+
+
+/* ----- STYLE POUR LE BOUTON RETOUR ----- */
+.bouton-retour-wrapper {
+    max-width: 1100px;
+    margin: 0 auto 20px auto;
+}
