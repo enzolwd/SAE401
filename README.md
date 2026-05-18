@@ -11,9 +11,6 @@ Conformément aux attendus du parcours B, le projet se concentre sur l'infrastru
 * **Audit de sécurité :** Réalisation d'un test d'intrusion documenté selon le référentiel OWASP WSTG.
 * **Correctifs :** Déploiement de correctifs pour pallier les vulnérabilités identifiées, validés par un contre-audit.
 
-## Méthodologie
-Le développement a été mené en méthode Agile (sprints de deux semaines). Une attention particulière a été accordée à la gestion de projet sous Trello, au versioning, ainsi qu'à l'ergonomie des interfaces (critères de Bastien & Scapin).
-
 ## Équipe (Groupe FA-B)
 * BAILLON Arthus
 * LEWANDOWSKI-BRY Enzo
